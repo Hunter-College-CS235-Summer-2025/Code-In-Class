@@ -8,7 +8,6 @@ Classroom::Classroom(int num, std::string room){
     }
     numStudents = num;
     this->room_ = room;
-    std:: cout <<  "parameterized constructor" << std:: endl;
 }
 
 int Classroom::getNumStudents() const{

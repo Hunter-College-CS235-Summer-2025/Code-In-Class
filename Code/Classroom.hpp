@@ -35,5 +35,5 @@ class Classroom {
     private:
         int numStudents;
         std::string room_;
-        std::vector<Student> roster;
+        std::vector<Student> roster_;
 };
