@@ -1,6 +1,6 @@
 /**
  * @file Classroom.hpp
- * @author Sadab Hafiz
+ * @author Sadab Hafiz (sh3646@hunter.cuny.edu)
  * @brief Classroom class header
  * @date 2025-05-28
  * 
