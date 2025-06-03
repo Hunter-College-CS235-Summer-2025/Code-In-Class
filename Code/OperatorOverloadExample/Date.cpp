@@ -66,6 +66,7 @@ bool Date::operator==(const Date& other) {
     // return true if all attributes of this object is equal to the other object
     return this->day == other.day && this->month == other.month && this->year == other.year;
 }
+
 bool Date::operator<(const Date& other) {
     // if the year is not the same, return true if this object's year is less than other's year
     if (this->year != other.year) {
@@ -78,4 +79,17 @@ bool Date::operator<(const Date& other) {
     }
     // if year and month are the same, return true if day of this object is less than the day of other
     return this->day < other.day;
+}
+
+int main(){
+    Date today(3,6,2025);
+    std::cout << today << std::endl;
+    Date yesterday(2,6,2025);
+    if (yesterday < today) {
+        std::cout << "< operator works(?)" <<  std::endl;
+    }
+    Date midterm(17,6,2025);
+    if (today == midterm) {
+        std::cout << "We're Cooked!" << std::endl;
+    }
 }
