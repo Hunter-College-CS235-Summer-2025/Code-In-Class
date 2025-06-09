@@ -59,9 +59,9 @@ MyClass& MyClass::operator=(MyClass&& other) {
         delete[] data_;
         data_ = other.data_;
         size_ = other.size_;
-        other.data_ = nullptr;
-        other.size_ = 0;
     }
+    other.data_ = nullptr;
+    other.size_ = 0;
     std::cout << "Move assignment operator invoked" << std::endl;
     return *this;
 }
