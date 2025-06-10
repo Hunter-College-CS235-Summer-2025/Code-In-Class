@@ -97,6 +97,11 @@ void LinkedList<T>::insert(const T& item, size_t position) {
 }
 
 template <class T>
+void LinkedList<T>::insert(const T& item) {
+    insert(item, item_count_);
+}
+
+template <class T>
 bool LinkedList<T>::remove(const T& item) {
     Node* current = head_;
     Node* prev = nullptr;

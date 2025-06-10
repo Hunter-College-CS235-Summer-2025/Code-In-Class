@@ -9,13 +9,20 @@
  */
 # include "LinkedList.hpp"
 # include <iostream>
+# include <cassert>
+
+void printNTimes(std::string message, int n=1){
+    for(int i=0; i<n; i++){
+        std::cout << message << std::endl;
+    }
+}
 
 int main() {
-    // TODO: overload insert function to work with one argument
+    printNTimes("Hello",10);
     LinkedList<std::string> groceries;
-    groceries.insert("eggs",groceries.getSize());
-    groceries.insert("sugar",groceries.getSize());
-    groceries.insert("milk",groceries.getSize());
+    groceries.insert("eggs");
+    groceries.insert("sugar");
+    groceries.insert("milk");
     groceries.insert("salt",1);
     groceries[3] = "butter";
     for(int i=0; i<groceries.getSize(); i++) {
@@ -27,6 +34,8 @@ int main() {
         }
     }
     catch(std::out_of_range& e) {
-        std::cout << "phew!" << std::endl;
+        std::cerr << e.what() << std::endl;
     }
+    assert(groceries.getSize() == 0);
+    std::cout << "Here" << std::endl;
 }

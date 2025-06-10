@@ -12,6 +12,7 @@
 
 #include <string>
 #include <stdexcept> 
+#include <iostream>
 
 template <class T>
 class LinkedList{
@@ -77,6 +78,14 @@ class LinkedList{
                 If position is greater than the item_count_ insert at the end.
         */
         void insert(const T& item,size_t position);
+
+        /**
+         * @brief Insert an item at the end of the list
+         * 
+         * @param item The item to be inserted
+         * @post Inserts the item at the end of the linked list
+         */
+        void insert(const T& item);
 
         /**
         * @brief Remove an item from the linked list
